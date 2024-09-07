@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { clsx } from 'clsx';
 
 const name = 'Tino Anggara';
-export const siteTitle = 'Next.js Sample Website';
+export const siteTitle = 'My Personal Website';
 
 export default function Layout({ children, home }) {
     return (
@@ -38,7 +38,7 @@ export default function Layout({ children, home }) {
                     <>
                         <Image
                             priority
-                            src="/images/profile.jpg"
+                            src="/images/foto_no-bg.png"
                             className={utilStyles.borderCircle}
                             height={144}
                             width={144}
@@ -51,7 +51,7 @@ export default function Layout({ children, home }) {
                         <Link href="/">
                             <Image
                                 priority
-                                src="/images/profile.jpg"
+                                src="/images/foto_no-bg.png"
                                 className={utilStyles.borderCircle}
                                 height={108}
                                 width={108}
@@ -76,16 +76,6 @@ export default function Layout({ children, home }) {
                     </Link>
                 </div>
             )}
-            <div className={home ? clsxAlert.success : clsxAlert.error}>
-                Status
-            </div>
-            {/* <div className={clsx({
-                [styles.success]: home === 'success',
-                [styles.error]: home === 'error',
-            })}
-            >
-                Status
-            </div> */}
         </div>
     );
 }

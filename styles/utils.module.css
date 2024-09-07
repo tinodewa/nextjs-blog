@@ -29,6 +29,10 @@
     border-radius: 9999px;
 }
 
+.borderHalfCircle {
+    border-radius: 20px;
+}
+
 .colorInherit {
     color: inherit;
 }
