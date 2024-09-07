@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Date from '../../components/date';
 import utilStyles from '../../styles/utils.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Post({ postData }) {
     return (
@@ -25,6 +26,10 @@ export default function Post({ postData }) {
                     <Date dateString={postData.date} />
                 </div>
                 <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+                <div>
+                    Visit the website:  
+                    <Link href={postData.link}> Here</Link>
+                </div>
             </article>
         </Layout>
     );

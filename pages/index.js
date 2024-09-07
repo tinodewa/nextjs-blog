@@ -20,15 +20,15 @@ export default function Home({ allPostsData }) {
         <div>
           <h3 className={utilStyles.headingmd}>Website Programming</h3>
           <ul className={utilStyles.list}>
-            {allPostsData.map(({ id, date, title}) => (
+            {allPostsData.map(({ id, date, title }) => (
               <li className={utilStyles.listItem} key={id}>
                 <Link href={`/posts/${id}`}>
                   {title}
-                  <br />
-                  <small className={utilStyles.lightText}>
-                    <Date dateString={date} />
-                  </small>
                 </Link>
+                <br />
+                <small className={utilStyles.lightText}>
+                  <Date dateString={date} />
+                </small>
               </li>
             )
             )
@@ -40,7 +40,7 @@ export default function Home({ allPostsData }) {
   );
 }
 
-export  function getStaticProps() {
+export function getStaticProps() {
   const allPostsData = getSortedPostsData();
   return {
     props: {
