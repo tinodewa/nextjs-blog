@@ -20,7 +20,8 @@ export default function Home({ allPostsData }) {
         <div>
           <h3 className={utilStyles.headingmd}>Website Programming</h3>
           <ul className={utilStyles.list}>
-            {allPostsData.map(({ id, date, title }) => (
+            {allPostsData.map(({ id, date, title, type }) => (
+              type == "web" ? (
               <li className={utilStyles.listItem} key={id}>
                 <Link href={`/posts/${id}`}>
                   {title}
@@ -29,7 +30,26 @@ export default function Home({ allPostsData }) {
                 <small className={utilStyles.lightText}>
                   <Date dateString={date} />
                 </small>
-              </li>
+              </li>) : ("")
+            )
+            )
+            }
+          </ul>
+        </div>
+        <div>
+          <h3 className={utilStyles.headingmd}>Android Programming</h3>
+          <ul className={utilStyles.list}>
+            {allPostsData.map(({ id, date, title, type }) => (
+              type == "android" ? (
+              <li className={utilStyles.listItem} key={id}>
+                <Link href={`/posts/${id}`}>
+                  {title}
+                </Link>
+                <br />
+                <small className={utilStyles.lightText}>
+                  <Date dateString={date} />
+                </small>
+              </li>) : ("")
             )
             )
             }
