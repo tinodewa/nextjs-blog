@@ -1,7 +1,7 @@
 ---
 title: 'Bahan Ajar (Intern Project)'
 date: '2019-10-01'
-link: ''
+link: '-'
 type: 'android'
 ---
 
